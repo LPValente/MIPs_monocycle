@@ -1,0 +1,4 @@
+python create_instructions_sv.py
+cd work
+xrun -clean
+xrun -overwrite ../*.sv -top monociclo_top_tb #-gui +access+rw

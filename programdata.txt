@@ -1,0 +1,10 @@
+# dados utilizados para definir as instruções que serão executadas pelo processador (LW, SW, ADD, SUB, BEQ)
+80010028 // salva o valor 0x28 (40) no registrador 1
+80020014 // salva o valor 0x14 (20) no registrador 2
+80030003 // salva o valor 0x03 (03) no registrador 3
+AC020002 // SW - salva o valor do registrador 2 no endereço 2 da memória de dados
+8C140002 // LW - salva o valor do endereço 2 da memória de dados no registrador 0x14 (20)
+0022D020 // ADD - soma os valores nos registradores 1 e 2 e salva no registrador 26
+0023B022 // SUB - subtrai os valores nos registradores 1 e 3 e salva no registrador 22
+0356B020 // ADD - soma os valores nos registradores 26 e 22 e salva no registrador 22
+1282FFFD // BEQ - volta para a linha 8 deste arquivo, caso RegData A e B sejam iguais
