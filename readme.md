@@ -3,23 +3,24 @@
 O presente trabalho consistiu no desenvolvimento de um processador MIPS monociclo para executar operações simples.
 
 As operações são:
-    - Salvar na memória (SW);
-    - Carregar da memória (LW);
-    - Soma entre registradores e salvar em algum registrador (ADD);
-    - Subtração entre registradores e salvar em algum registrador (SUB);
-    - Pular para alguma instrução caso dois registradores sejam iguais (BEQ);
+
+  - Salvar na memória (SW);
+  - Carregar da memória (LW);
+  - Soma entre registradores e salvar em algum registrador (ADD);
+  - Subtração entre registradores e salvar em algum registrador (SUB);
+  - Pular para alguma instrução caso dois registradores sejam iguais (BEQ);
 
 Uma instrução foi adicionada para permitir os testes das instruções anteriores:
-    - Salvar o valor do imediato no registrador
-    - OPCODE 0b100000 (out 0b010100000)
-    - RegDst         0 -> write register recebe o valor de instruction[20:16]
-    - ALUSrc         1 -> Entrada B da ULA recebe o valor do imediato
-    - MemtoReg       0 -> Entrada WriteData recebe o resultado da ULA
-    - RegWrite       1 -> Permite a escrita nos registradores
-    - MemRead        0 -> desabilita a leitura da memória de dados
-    - MemWrite       0 -> desabilita a escrita da memória de dados
-    - Branch         0 -> desabilita o branch
-    - ALUOp[1:0] 2'b00 -> ULA realiza adição
+  - Salvar o valor do imediato no registrador
+  - OPCODE 0b100000 (out 0b010100000)
+  - RegDst         0 -> write register recebe o valor de instruction[20:16]
+  - ALUSrc         1 -> Entrada B da ULA recebe o valor do imediato
+  - MemtoReg       0 -> Entrada WriteData recebe o resultado da ULA
+  - RegWrite       1 -> Permite a escrita nos registradores
+  - MemRead        0 -> desabilita a leitura da memória de dados
+  - MemWrite       0 -> desabilita a escrita da memória de dados
+  - Branch         0 -> desabilita o branch
+  - ALUOp[1:0] 2'b00 -> ULA realiza adição
 
 ## Algoritmo utilizado para teste
 
